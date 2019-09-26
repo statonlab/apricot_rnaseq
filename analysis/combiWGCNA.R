@@ -204,30 +204,34 @@ dev.off()
 # 1. the genes inside a given module are summarize with the module eigengene, which can be considered as the best summary of the standardized module expression data
 MydataDesign <- read.csv("Both Datadesign.csv", header = T, row.names = 1)
 datAll <- cbind(MEs1, MydataDesign[,c(1,3)])
+datAll$Timepoint <- gsub("preChill","0", datAll$Timepoint)
 datAll$Timepoint <- gsub("C", "Sepal", datAll$Timepoint)
 datAll$Timepoint <- gsub("D", "Petal", datAll$Timepoint)
 PeachAll <- datAll[1:69,]
 ApricotAll <- datAll[70:129,]
+PeachAll$Timepoint <- gsub("p-","",PeachAll$Timepoint)
 PeachAll$Genotype <- factor(PeachAll$Genotype, levels = c("A209", "A340", "A318", "A323"))
-PeachAll$Timepoint <- gsub("preChill","0", PeachAll$Timepoint)
-datasum <- summarySE(PeachAll, measurevar = "ME11", groupvars = c("Timepoint","Genotype"))
+datasum <- summarySE(PeachAll, measurevar = "ME4", groupvars = c("Timepoint","Genotype"))
 plot <-
-  ggplot(datasum, aes(x=Timepoint, y=ME11, color=Genotype, group=Genotype)) +
-  geom_point(size=2) + geom_line(size=1) + geom_errorbar(aes(ymin=ME11-se,ymax=ME11+se), width=0.1)+
+  ggplot(datasum, aes(x=Timepoint, y=ME4, color=Genotype, group=Genotype)) +
+  geom_point(size=2) + geom_line(size=1) + geom_errorbar(aes(ymin=ME4-se,ymax=ME4+se), width=0.1)+
   scale_color_manual(values=c("#FF9999","#FF3333","#99CCFF","#0033FF")) +
-  scale_x_discrete(limits=c("0","p-100","p-600","preBloom-early","p-1000","preBloom-late")) +
+  scale_x_discrete(limits=c("0","100","600","preBloom-early","1000","preBloom-late")) +
   theme_classic(base_size = 24)
 plot
+ggsave("peach_ME4.png", height = 5,width = 12)
 
+ApricotAll$Timepoint <- gsub("a-","",ApricotAll$Timepoint)
 ApricotAll$Genotype <- factor(ApricotAll$Genotype, levels = c("A2137", "A1956", "A660","A1267"))
-datasum <- summarySE(ApricotAll, measurevar = "ME11", groupvars = c("Timepoint","Genotype"))
-plot <- ggplot(datasum, aes(x=Timepoint, y=ME11, color=Genotype, group=Genotype)) +
-  geom_point(size=2) + geom_line(size=1) + geom_errorbar(aes(ymin=ME11-se,ymax=ME11+se), width=0.1) + #scale_y_continuous(limits = c(0,1000)) +
-  scale_x_discrete(limits=c("a-0","a-100","a-400","Bud-800","Sepal","Petal","Flower-800")) + 
+datasum <- summarySE(ApricotAll, measurevar = "ME4", groupvars = c("Timepoint","Genotype"))
+plot <- ggplot(datasum, aes(x=Timepoint, y=ME4, color=Genotype, group=Genotype)) +
+  geom_point(size=2) + geom_line(size=1) + geom_errorbar(aes(ymin=ME4-se,ymax=ME4+se), width=0.1) + #scale_y_continuous(limits = c(0,1000)) +
+  scale_x_discrete(limits=c("0","100","400","Bud-800","Sepal","Petal","Flower-800")) + 
   scale_color_manual(values=c("#FF9999","#FF3333","#99CCFF","#0033FF"))+
   theme_classic(base_size = 24)
   #theme(text = element_text(size=24),panel.background = element_blank(), axis.line = element_line(colour = "black"))
 plot
+ggsave("apricot_ME4.png", height = 5, width = 12)
 
 datAll$Genotype <- factor(datAll$Genotype, levels = c("A209", "A340", "A318", "A323","A2137","A1956","A660","A1267"))
 datAll$Timepoint <- gsub("preChill","p-0", datAll$Timepoint)
