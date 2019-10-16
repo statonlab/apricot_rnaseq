@@ -1,8 +1,9 @@
 # Apricot and peach RNASeq on winter dormancy transition
 
-This repository includes the scripts generating data and figures for the manuscript. 
-`data`
-- Sample description tables
+This repository includes the scripts generating data and figures for the manuscript.          
+`data`        
+- Sample description tables         
+
 `analysis`
 - The pipeline used to analyze raw Illumina reads: `pipeline`
 - The Differential expression analysis R scripts: `DEanalysis`
