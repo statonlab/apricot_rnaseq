@@ -1,1 +1,1 @@
-scripts and intermediate analysis files
+## Scripts for RNASeq analysis
