@@ -1,0 +1,8 @@
+Pp02	JGI	chromosome	1	30405870	.	.	.	ID=Pp02_v2.0.a1;Name=Pp02
+Pp04	JGI	chromosome	1	25843236	.	.	.	ID=Pp04_v2.0.a1;Name=Pp04
+Pp06	JGI	chromosome	1	30767194	.	.	.	ID=Pp06_v2.0.a1;Name=Pp06
+Pp08	JGI	chromosome	1	22573980	.	.	.	ID=Pp08_v2.0.a1;Name=Pp08
+Pp01	JGI	chromosome	1	47851208	.	.	.	ID=Pp01_v2.0.a1;Name=Pp01
+Pp03	JGI	chromosome	1	27368013	.	.	.	ID=Pp03_v2.0.a1;Name=Pp03
+Pp05	JGI	chromosome	1	18496696	.	.	.	ID=Pp05_v2.0.a1;Name=Pp05
+Pp07	JGI	chromosome	1	22388614	.	.	.	ID=Pp07_v2.0.a1;Name=Pp07
