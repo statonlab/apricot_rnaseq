@@ -10,7 +10,7 @@ The following scripts are used:
 - `rRNA_filter_Bowtie2.sh`: filter out the rRNA reads      
 - `merge_counts.sh`: create a table of read-counts for all samples 
 
-`DEanalysis`
+`DEanalysis`     
 R scripts for differential expression analyses. The following scripts are:
 - `Apricot_DE.R`: DESeq2 scripts on apricot data. 
 - `Peach_DEseq.R`: DESeq2 scritps on peach data.
@@ -19,7 +19,7 @@ R scripts for differential expression analyses. The following scripts are:
 - `circlize_circosplot.R`: generate ciros plot.
 - `extractQTL_gene.R`: extract genes on the QTL region.
 
-`network_analysis`
+`network_analysis`    
 R scripts for co-expression analyses. The following scripts are:
 - `Apricot_WGCNA.R`: WGCNA scripts on apricot data.
 - `Peach_WGCNA.R`: WGCNA scripts on peach data.
