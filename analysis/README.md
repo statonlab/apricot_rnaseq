@@ -23,7 +23,7 @@ R scripts for differential expression analyses. The following scripts are:
 R scripts for co-expression analyses. The following scripts are:
 - `Apricot_WGCNA.R`: WGCNA scripts on apricot data.
 - `Peach_WGCNA.R`: WGCNA scripts on peach data.
-- 'combiWGCNA.R`: WGCNA scritps integrating apricot and peach data.
-- 'coNetworkGO.R': scripts for plotting GO enrichment results.
+- `combiWGCNA.R`: WGCNA scritps integrating apricot and peach data.
+- `coNetworkGO.R`: scripts for plotting GO enrichment results.
 
      
