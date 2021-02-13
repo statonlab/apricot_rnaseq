@@ -19,8 +19,8 @@ R scripts for differential expression analyses. The following scripts are:
 - `circlize_circosplot.R`: generate ciros plot.
 - `extractQTL_gene.R`: extract genes on the QTL region.
 
-`imgs`
-Gene expession profiles for all 26,872 genes in the peach genome. For two pdf files, each page contains one gene.
+`imgs`    
+Gene expession profiles for all 26,872 genes in the peach genome. For two pdf files, each page contains one gene.      
 - `all apricot gene expression patterns.pdf`: Genes expression profiles for four apricot genotypes.
 - `all peach gene expression patterns.pdf`: Gene expression profiles for four peach genotypes
 
